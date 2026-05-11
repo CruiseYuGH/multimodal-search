@@ -2,7 +2,7 @@
 from __future__ import annotations
 from app.core.types import Chunk
 from app.core.exceptions import VideoReserved
-from app.core.registry import register
+from app.core.decorator import register
 from app.preprocess.base import BasePreprocessor
 
 

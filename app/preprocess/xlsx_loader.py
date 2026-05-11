@@ -1,7 +1,7 @@
 """xlsx → 每行一个 Chunk。"""
 from __future__ import annotations
 from app.core.types import Chunk, Modality, SourceType
-from app.core.registry import register
+from app.core.decorator import register
 from app.core.exceptions import PreprocessError
 from app.preprocess.base import BasePreprocessor
 from app.utils.hashing import sha256_file, make_chunk_id

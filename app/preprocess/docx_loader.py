@@ -1,7 +1,7 @@
 """docx → 段落级 Chunk；过长段落再切。"""
 from __future__ import annotations
 from app.core.types import Chunk, Modality, SourceType
-from app.core.registry import register
+from app.core.decorator import register
 from app.core.exceptions import PreprocessError
 from app.preprocess.base import BasePreprocessor
 from app.preprocess.text_loader import split_text
