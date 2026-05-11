@@ -69,6 +69,14 @@ class DocStore:
         except Exception:
             return False
 
+    def count(self) -> int:
+        """返回 collection 中的实体总数。"""
+        coll = self._ensure_coll()
+        try:
+            return coll.num_entities
+        except Exception as e:
+            raise StoreError(f"doc_store count 失败: {e}") from e
+
     def search(self, query_vec: np.ndarray, topk: int = settings.DEFAULT_TOPK,
                expr: str | None = None) -> list[Hit]:
         coll = self._ensure_coll()
